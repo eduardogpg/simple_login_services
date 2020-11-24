@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col">
+        <h1>Bienvenidos</h1>
+    </div>
+</div>
+
+<hr>
+
+<% if user_authenticated? %>
+    <div class="row">
+        <div class="col">
+            <div>
+                <%= link_to 'Logout', logout_path %>
+            </div>
+        </div>
+    </div>
+<% else %>
+    <div class="row">
+        <div class="col">
+            <div>
+                <%= link_to 'Crear cuenta', new_user_path %>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+<%= link_to 'Custome', custome_path %>
